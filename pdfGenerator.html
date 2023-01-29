@@ -1,0 +1,42 @@
+<template>
+    <div class ="test" lwc:dom="manual">
+
+    </div>
+    <div  class="mainclass">
+        <div >
+            <img src="https://www.gstatic.com/webp/gallery3/1.png">
+        </div>
+      
+        <div >
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th> 
+                </tr> 
+            </thead>
+            <tbody>
+                <template iterator:it={userData}>
+                    <tr key={it.name}>
+                        <td>{it.value.name}</td>
+                        <td>{it.value.email}</td>
+                        <td>{it.value.phone}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </div>
+
+    </div>
+
+    <lightning-button label="Save" icon-name="utility:save" onclick={handleClick} variant="brand"></lightning-button>
+
+    <div id="screenshotcanvas" class="screenshotcanvas">
+        <canvas class="my_canvas_id slds-hide">
+        
+        </canvas>
+    </div>
+
+    <img src={imgsrc} class="lightense"/>
+</template>
